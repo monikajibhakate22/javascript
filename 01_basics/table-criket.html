@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ICC table points</title>
+    <link rel="shortcut icon" href="./images/criket-logo.png">
+    <link rel="stylesheet" href="../node_modules/bootstrap-icons/font/bootstrap-icons.css">
+    <style>
+        table{
+            font-family: arial;
+            
+            
+            
+            
+
+        }
+        .w{
+            background-color: green;
+            color: white;
+            border-radius: 2px;
+            padding: 2px;
+            font-size: 12px;
+            display: inline-block;
+            width: 14px;
+            text-align: center;
+
+
+        }
+        .l{
+            background-color: red;
+            color: white;
+            padding: 2px;
+            font-size: 12px;
+
+            border-radius: 2px;
+            display: inline-block;
+            width: 14px;
+            text-align: center;
+
+        }
+        .d{
+            background-color: gray;
+            color: white;
+            padding: 2px;
+            border-radius: 2px;
+            display: inline-block;
+            width: 14px;
+            text-align: center;
+            font-size: 12px;
+
+
+
+
+        }
+        .flag{
+            width: 30px;
+        }
+        .country{
+            font-size: 20px;
+            font-weight: bold;
+        }
+        .win{
+            background-color: rgb(190, 220, 190);
+        
+            border-radius: 10px;
+            padding: 5px;
+        }
+        .loss{
+            background-color: rgb(221, 195, 195);
+            border-radius: 10px;
+            padding: 5px;
+        }
+        .tie{
+            background-color: rgb(230, 230, 197);
+            border-radius: 10px;
+            padding: 5px;
+        }
+        .nr{
+            background-color: rgb(215, 195, 206);
+            border-radius: 10px;
+            padding: 5px;
+        }
+        tr{
+            box-shadow: 2px 2px 2px gray;
+            padding: 20px;
+            margin-bottom: 15px;
+            border: 1px solid gray;
+        }
+        .lh{
+            font-weight: bold;
+        }
+        .table-caption{
+            font-weight: bold;
+            font-size: 25px;
+            text-align: left;
+        }
+        
+    </style>
+</head>
+<body>
+<table  width="100%" frame="void" cellspacing="5" cellpadding="5" >
+    <!-- rules="all" is for columns-->
+     
+    <caption>
+       <div class="table-caption">WTC 2023- Points Table</div> 
+    </caption>
+    <colgroup span="1"></colgroup>
+    <thead>
+        <tr height="50" align="left">
+            <th width="250">
+                Teams
+            </th>
+            <th>M</th>
+            <th>W</th>
+            <th>L</th>
+            <th>T</th>
+            <th>D</th>
+            <th>N/R</th>
+            <th>PT</th>
+            <th>PCT</th>
+            <th>series from</th>
+            <th>Next</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td><span>1</span> <img src="./images/southafrica.png" class="flag"> <span class="country">SOUTH AFRICA</span></td>
+            <td>10</td>
+            <td>6</td>
+            <td>3</td>
+            <td>0</td>
+            <td>1</td>
+            <td>0</td>
+            <td>76</td>
+            <td>63.33</td>
+            <td><span class="w">W</span> <span class="w">W</span> <span class="w">W</span> <span class="w">W</span> <span class="w">W</span> <span class="bi bi-chevron-down"></span></td>
+            <td> vs PAK, PAK</td>
+        </tr>
+        <tr>
+            <td><span>2</span> <img src="./images/australia.png" class="flag"> <span class="country">AUSTRALIA</span></td>
+            <td>15</td>
+            <td>9</td>
+            <td>4</td>
+            <td>0</td>
+            <td>2</td>
+            <td>0</td>
+            <td>106</td>
+            <td>58.86</td>
+            <td><span class="w">W</span> <span class="w">W</span> <span class="l">L</span> <span class="w">W</span> <span class="d">D</span> <span class="bi bi-chevron-down"></span></td>
+            <td> vs IDI, IDI,SL </td>
+        </tr>
+        <tr>
+            <td><span>3</span> <img src="./images/india.png" class="flag"> <span class="country">INDIA</span></td>
+            <td>17</td>
+            <td>9</td>
+            <td>6</td>
+            <td>0</td>
+            <td>2</td>
+            <td>0</td>
+            <td>114</td>
+            <td>55.89</td>
+            <td><span class="l">L</span> <span class="l">L</span> <span class="w">W</span> <span class="l">L</span> <span class="d">D</span> <span class="bi bi-chevron-down"></span></td>
+            <td> vs AUS, AUS</td>
+        </tr>
+        <tr>
+            <td><span>4</span> <img src="./images/newzealand.png" class="flag"> <span class="country">NEW ZEALAND</span></td>
+            <td>14</td>
+            <td>7</td>
+            <td>7</td>
+            <td>0</td>
+            <td>0</td>
+            <td>0</td>
+            <td>81</td>
+            <td>48.21</td>
+            <td><span class="w">W</span> <span class="w">W</span> <span class="l">L</span> <span class="l">L</span> <span class="w">W</span> <span class="bi bi-chevron-down"></span></td>
+            <td> vs PAK, PAK</td>
+        </tr>
+        <tr>
+            <td><span>5</span> <img src="./images/shrilanka.png" class="flag"> <span class="country">SHRI LANKA</span></td>
+            <td>10</td>
+            <td>6</td>
+            <td>3</td>
+            <td>0</td>
+            <td>1</td>
+            <td>0</td>
+            <td>70</td>
+            <td>53.33</td>
+            <td><span class="w">W</span> <span class="w">W</span> <span class="w">W</span> <span class="l">L</span> <span class="l">L</span> <span class="bi bi-chevron-down"></span></td>
+            <td> vs AUS, AUS</td>
+        </tr>
+        <tr>
+            <td><span>6</span> <img src="./images/england.png" class="flag"> <span class="country">ENGLAND</span></td>
+            <td>10</td>
+            <td>6</td>
+            <td>3</td>
+            <td>0</td>
+            <td>1</td>
+            <td>0</td>
+            <td>76</td>
+            <td>70.33</td>
+            <td><span class="w">W</span> <span class="w">W</span> <span class="w">W</span> <span class="w">W</span> <span class="w">W</span> <span class="bi bi-chevron-down"></span></td>
+            <td> vs PAK, PAK</td>
+        </tr>
+        <tr>
+            <td><span>7</span> <img src="./images/pakistan.png" class="flag"> <span class="country">PAKISTAN</span></td>
+            <td>10</td>
+            <td>6</td>
+            <td>3</td>
+            <td>0</td>
+            <td>1</td>
+            <td>0</td>
+            <td>76</td>
+            <td>65.33</td>
+            <td><span class="w">W</span> <span class="w">W</span> <span class="w">W</span> <span class="w">W</span> <span class="w">W</span> <span class="bi bi-chevron-down"></span></td>
+            <td> vs PAK, PAK</td>
+        </tr>
+    </tbody>
+    <tfoot>
+        <tr>
+            <td colspan="6">
+                <span class="lh">points summary</span></td>
+
+                <td colspan="5" align="right">
+                <span class="win">win</span>
+                <span class="loss">loss</span>
+                <span class="tie">Tie</span>
+                <span class="nr">No result</span></td>
+            
+        </tr>
+
+    </tfoot>
+</table>
+    
+</body>
+</html>
