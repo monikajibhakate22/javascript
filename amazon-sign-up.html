@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../node_modules/bootstrap-icons/font/bootstrap-icons.css">
+    <title>Document</title>
+    <style>
+        input{
+            border: 1px solid rgb(90, 80, 80);
+            border-radius: 4px;
+            width:300px;
+            height: 25px;
+            box-shadow: 1px 1px 1px gray;
+        }
+        .name:required+span{
+            width: 250px;
+        }
+        form{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            
+        }
+        .verify-button{
+            background-color: yellow;
+            height: 30px;
+            width: 300px;
+            border-radius: 20px;
+            border: none;
+            margin-top: 18px;
+            font-family: arial;
+            margin-bottom: 15px;
+        }
+        .password{
+            padding: 3px;
+            margin-bottom: 8px;
+        }
+        
+                
+        select{
+            height: 30px;
+            justify-content: space-between;
+            border-radius: 10px;
+        }
+        .number{
+            width: 240px;
+            height: 25px;
+
+        }
+        .term-conditions{
+            font-size: 13px;
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+    <form>
+        <div><img src="./images/amazon-logo.png" ></div>
+        <div style="border: 1px solid rgb(155, 148, 148); border-radius: 8px; width: 350px; height: 580px; box-shadow: 2px 2px 2px gray; padding-left: 20px;">
+            <h1 style="font-size: 25px; font-weight: bold; font-family: arial;">Create Account</h1>
+            <div>
+                <span style="font-weight: bold;">your name</span>
+                <br>
+                <input type="text" placeholder="First and Last name" required class="name"> <span>*</span>
+            </div>
+            <div style="margin-top: 10px;">
+                <span style="font-weight: bold; ">Mobile Number</span>
+                <br>
+                
+                <select>
+                    <option value="+91">IN+91</option>
+                    <option value="+92">+92</option>
+                    <option value="+93">US+93</option>
+                </select>
+                <input type="number" placeholder="mobile number" required pattern="\d{10}" class="number"> <span>*</span>
+                
+                <br>
+                <span>Should be 10 digit</span>
+                <div style="margin-top: 10px;">
+            
+
+                    <span style="font-weight: bold;">password</span> <br>
+                    <input type="password" placeholder="At least 6 characters" class="password" pattern="\w{6}"> <br>
+                    <span class="bi bi-info-circle-fill" style="color: blue; padding-right: 5px;" ></span> <span style="font-size: 13px; font-family: arial;">password must be at least 6 characters</span>
+                </div>
+                <div style="margin-top: 13px;">
+                    To verify your number, we will send you a text <br> message with a temporary code. Message and  <br>data rates may apply.
+                </div>
+                <button class="verify-button">verify mobile number</button>
+                <hr>
+                <div style="font-weight: bold; margin-top: 20px;">Buying for work?</div>
+                <div style="color: rgb(66, 66, 151); margin-bottom: 20px;">
+                    Create free business account
+                </div>
+                <hr>
+                <div style="margin-top: 5px;">already have an account? <span style="color: rgb(66, 66, 151); font-size: 18px;">sign in <span class="bi bi-chevron-right"></span></span></div>
+                <div class="term-conditions">
+                    By creating an account or logging in, you agree to Amazon’s <span><a href="">Conditions of Use</a> </span> and <span> <a href="">Privacy Policy</a></span>.
+                </div>
+
+            </div>
+        </div>
+        
+    
+    </form>
+</body>
+</html>
