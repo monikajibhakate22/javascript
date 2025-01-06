@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../node_modules/bootstrap-icons/font/bootstrap-icons.css">
+    <style>
+        .men-fashion{
+            background-image: url(./images/men-fashion.jpg);
+            background-size: cover;
+            width: 400px;
+            height: 400px;
+            position: relative;
+            border-bottom-right-radius: 70px;
+            border-bottom-left-radius: 288px;
+            /* position relatives it take child element under the parent element parent=img, offer=child */
+            
+
+        }
+        .offer{
+            width: 50px;
+            height: 50px;
+            border-radius: 50px;
+            background-color: red;
+            color: white;
+            text-align: center;
+            padding: 10px;
+            position: absolute;
+            top: 10px;
+            right: 10px;
+        }
+        .badge{
+            width: 10px;
+            height: 10px;
+            border-radius: 20px;
+            background-color: red;
+            color: white;
+            padding: 2px;
+            display: inline-block;
+            position: absolute;
+            top: -5px;
+            right: -5px;
+            font-size: 6px;
+        }
+        button{
+            position: relative;
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <button class="bi bi-cart4"> <span class="badge">4</span></button>
+    </nav>
+    <div class="men-fashion">
+        <div class="offer">save <br>25%</div>
+    </div>
+</body>
+</html>
