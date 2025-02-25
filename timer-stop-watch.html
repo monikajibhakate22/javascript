@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../node_modules/bootstrap-icons/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="../node_modules/bootstrap/dist/css/bootstrap.css">
+    <title>Document</title>
+
+    <script>
+        var Hours=0;
+        var Minutes=0;
+        var Seconds=0;
+        var Count=100;
+        var thread;
+
+        function Timer(){
+            Count++;
+            if(Count===999){
+                Count=100;
+                Seconds++;
+            }else{
+                if(Minutes===60){
+                    Minutes=0;
+                    Hours++
+                }
+                else{
+                    if(Seconds===60){
+                        Seconds=0;
+                        Minutes++;
+                    }
+                }
+            }
+
+            document.getElementById("Milliseconds").innerHTML=`${Count}ms`;
+            document.getElementById("Seconds").innerHTML=`${Seconds}s`;
+            document.getElementById("Minutes").innerHTML=`${Minutes}m`;
+            document.getElementById("Hours").innerHTML=`${Hours}h`;
+
+
+
+        }
+
+        function StartClick(){
+            window.thread=setInterval(Timer,1);
+        }
+
+        function StopClick(){
+            clearInterval(thread);
+        }
+function ResetClick(){
+    Hours=0;
+    Minutes=0;
+    Seconds=0;
+    Count=0;
+
+    document.getElementById("Milliseconds").innerHTML="0 ms";
+    document.getElementById("Seconds").innerHTML="00 s";
+    document.getElementById("Minutes").innerHTML="00 m";
+    document.getElementById("Hours").innerHTML="00 h";
+
+
+}
+
+function PauseClick(){
+    clearInterval(thread)
+}
+
+    </script>
+</head>
+<body class="container-fluid mt-5" style="background-color: rgb(228, 220, 220);">
+    <div class="container border radius-rounded border-black p-5 text-center">
+        <h2><span class="bi bi-clock"></span> STOPWATCH </h2>
+        <div class="d-flex justify-content-center m-5 mt-5" style=" border: 2px solid rgb(24, 22, 22); padding-bottom: 30px;">
+            <div id="Hours" class="fw-bold mt-3 fs-3 ">
+
+            </div>
+            <div id="Minutes" class="fw-bold fs-3 mt-3 ">
+
+            </div>
+            <div id="Seconds" class="fw-bold fs-3 mt-3">
+
+            </div>
+            <div id="Milliseconds" class="fw-bold fs-3 mt-3">
+
+            </div>
+
+        </div>
+        <div class=" text-center">
+            <button onclick="StartClick()" class="btn btn-success p-2">Start <span class="bi bi-play"></span></button>
+            <button onclick="PauseClick()" class="btn btn-primary p-2">Pause <span class="bi bi-pause"></span></button>
+            <button onclick="ResetClick() " class="btn btn-danger p-2">Rset <span class="bi bi-trash "></span></button>
+
+
+        </div>
+
+    </div>
+    
+</body>
+</html>
