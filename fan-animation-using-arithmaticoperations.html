@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../node_modules/bootstrap-icons/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="../node_modules/bootstrap/dist/css/bootstrap.css">
+    <title>Document</title>
+    <style>
+        @keyframes spin {
+            from {
+                transform: rotate(0deg);
+            }
+
+            to {
+                transform: rotate(360deg);
+            }
+        }
+
+        .hide-bg {
+            mix-blend-mode: multiply;
+           
+            
+        }
+        
+    </style>
+
+    <script>
+        var FanSpeed=0;
+        function StartClick(){
+            FanSpeed=2
+    var img=document.querySelector("img");
+    img.style.animation=`spin ${FanSpeed}s infinite linear`;
+}
+function StopClick(){
+    var img=document.querySelector("img");
+    img.style.animation=`${FanSpeed}`;
+}
+
+function LowSpeedClick(){
+    FanSpeed/=2
+    var img=document.querySelector("img");
+img.style.animation=`spin ${FanSpeed}s infinite linear`;
+}
+
+function MediumSpeedClick(){
+    FanSpeed/=3
+    var img=document.querySelector("img");
+img.style.animation=`spin ${FanSpeed}s infinite linear`;
+}
+
+function HightSpeedClick(){
+    FanSpeed/=5
+    var img=document.querySelector("img");
+img.style.animation=`spin ${FanSpeed}s infinite linear`;
+}
+
+    </script>
+</head>
+
+<body class="bg-info-subtle">
+    
+    <div>
+        <img src="../public/images/fan-blades.jpg" width="200px" id="img" height="200px" class="hide-bg">
+    </div>
+    <div class="d-flex p-2 m-2 mx-5">
+
+        <button onclick="StartClick()" class="btn btn-danger">start</button>
+    
+        <button onclick="LowSpeedClick()" class="btn btn-primary rounded-circle" id="button1">1</button>
+        <button onclick="MediumSpeedClick()" class="btn btn-secondary rounded-circle" id="button2">2</button>
+        <button onclick="HightSpeedClick()" class="btn btn-danger rounded-circle" id="button3">3</button>
+        <button onclick="StopClick()" class="btn btn-success ">Stop</button>
+        
+    </div>
+</body>
+
+</html>
