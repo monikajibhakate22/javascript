@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../node_modules/bootstrap-icons/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="../node_modules/bootstrap/dist/css/bootstrap.css">
+    <title>Document</title>
+
+    <script>
+        var ProgressValue= 100;
+        function StartProgress(){
+            ProgressValue--;
+
+            document.getElementById("lblStatus").innerHTML=`${ProgressValue}% Completed`;
+            if(ProgressValue===1){
+                document.getElementById("imgContainer").style.display="block";
+
+                document.getElementById("ProgressContainer").style.display="none";
+                clearInterval(thread);
+            }
+        }
+        var thread;
+        function LoadClick(){
+            document.getElementById("btnContainer").style.display="none";
+
+            document.getElementById("ProgressContainer").style.display="block";
+            thread=setInterval(StartProgress,100);
+        }
+
+        function PauseClick(){
+            clearInterval(thread);
+            document.getElementById("lblStatus").innerHTML=`${ProgressValue}% Paused`;
+        }
+        function PlayClick(){
+            thread= setInterval(StartProgress,100);
+            document.getElementById("lblStatus").innerHTML=`${ProgressValue}% Completed`;
+        }
+    </script>
+</head>
+<body class="container-fluid d-flex justify-content-center align-items-center" style="height: 100vh;">
+    <div>
+        <div id="btnContainer">
+            <button onclick="LoadClick()" class="btn btn-primary">Load Image</button>
+
+        </div>
+
+        <div id="ProgressContainer" class="text-center" style="display: none;">
+
+            <progress min="100" max="1" style="width: 400px; height: 30px;" id="ProgressBar"></progress>
+            <div>
+                <button onclick="PlayClick()" class="bi bi-play btn btn-success"></button>
+                <button class="bi bi-pause btn btn-primary" onclick="PauseClick()"></button>
+            </div>
+            <p id="lblStatus"></p>
+
+        </div>
+        <div id="imgContainer" style="display: none;">
+            <img src="../public/images/women-fashion.jpg" width="400" height="400">
+        </div>
+    </div>
+    
+</body>
+</html>
