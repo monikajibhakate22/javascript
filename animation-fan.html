@@ -21,20 +21,24 @@
         .hide-bg {
             mix-blend-mode: multiply;
         }
-        .stop{
-            animation-play-state:paused;
-        }
+        
     </style>
 
     <script>
-        // function StartClick() {
-        //     var img = document.querySelector("img");
-        //     img.style.animationName = "spin";
-        //     img.style.animationDuration = "500ms";
-        //     img.style.animationIterationCount = "infinite";
-        //     img.style.animationTimingFunction = "linear";
+        function StartClick() {
+            var img = document.querySelector("img");
+            img.style.animationName = "spin";
+            img.style.animationDuration = "500ms";
+            img.style.animationIterationCount = "infinite";
+            img.style.animationTimingFunction = "linear";
 
-        // }
+        }
+        function StopClick(){
+            var img= document.querySelector("img").style='';
+            
+        }
+
+
         
 
         function LowSpeedClick() {
@@ -73,15 +77,15 @@
 </head>
 
 <body>
-    <!-- <button onclick="StartClick()">start</button>
-    <button onclick="stopClick()">Stop</button> -->
+    <button onclick="StartClick()" class="btn btn-danger">start</button>
+    <button onclick="StopClick()" class="btn btn-success ">Stop</button>
     <div class="justify-content-center">
         <img src="../public/images/fan-blades.jpg" width="200px" id="img" height="200px" class="hide-bg">
     </div>
     <div class="d-flex p-2 m-2 mx-5">
-        <button onclick="LowSpeedClick()" id="button1">1</button>
-        <button onclick="MediumSpeedClick()" id="button2">2</button>
-        <button onclick="HightSpeedClick()" id="button3">3</button>
+        <button onclick="LowSpeedClick()" class="btn btn-primary" id="button1">1</button>
+        <button onclick="MediumSpeedClick()" class="btn btn-secondary" id="button2">2</button>
+        <button onclick="HightSpeedClick()" class="btn btn-danger" id="button3">3</button>
     </div>
 </body>
 
