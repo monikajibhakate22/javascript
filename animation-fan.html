@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../node_modules/bootstrap-icons/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="../node_modules/bootstrap/dist/css/bootstrap.css">
+    <title>Document</title>
+    <style>
+        @keyframes spin {
+            from {
+                transform: rotate(0deg);
+            }
+
+            to {
+                transform: rotate(360deg);
+            }
+        }
+
+        .hide-bg {
+            mix-blend-mode: multiply;
+        }
+        .stop{
+            animation-play-state:paused;
+        }
+    </style>
+
+    <script>
+        // function StartClick() {
+        //     var img = document.querySelector("img");
+        //     img.style.animationName = "spin";
+        //     img.style.animationDuration = "500ms";
+        //     img.style.animationIterationCount = "infinite";
+        //     img.style.animationTimingFunction = "linear";
+
+        // }
+        
+
+        function LowSpeedClick() {
+
+            var img = document.querySelector("img");
+            img.style.animationName = "spin";
+            img.style.animationDuration = "1200ms";
+            img.style.animationIterationCount = "infinite";
+            img.style.animationTimingFunction = "linear";
+        }
+
+        function MediumSpeedClick() {
+            var img = document.querySelector("img");
+            img.style.animationName = "spin";
+            img.style.animationDuration = "500ms";
+            img.style.animationIterationCount = "infinite";
+            img.style.animationTimingFunction = "linear";
+
+        }
+
+        function HightSpeedClick() {
+            var img = document.querySelector("img");
+            img.style.animationName = "spin";
+            img.style.animationDuration = "200ms";
+            img.style.animationIterationCount = "infinite";
+            img.style.animationTimingFunction = "linear";
+        }
+
+
+
+
+
+
+
+    </script>
+</head>
+
+<body>
+    <!-- <button onclick="StartClick()">start</button>
+    <button onclick="stopClick()">Stop</button> -->
+    <div class="justify-content-center">
+        <img src="../public/images/fan-blades.jpg" width="200px" id="img" height="200px" class="hide-bg">
+    </div>
+    <div class="d-flex p-2 m-2 mx-5">
+        <button onclick="LowSpeedClick()" id="button1">1</button>
+        <button onclick="MediumSpeedClick()" id="button2">2</button>
+        <button onclick="HightSpeedClick()" id="button3">3</button>
+    </div>
+</body>
+
+</html>
