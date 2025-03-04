@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../node_modules/bootstrap/dist/css/bootstrap.css">
+    <script src="../node_modules/bootstrap/dist/js/bootstrap.bundle.js"></script>
+
+    <script>
+        var attempt = 0;
+        var OTP =2025;
+        function time(){
+            document.getElementById("txtOTP").disabled=false;
+            document.getElementById("lblContent").innerHTML="Try again ";
+            attempt=0;
+
+        }
+       
+     
+
+       
+        function submitClick(){
+
+
+       
+        var input =parseInt(document.getElementById("txtOTP").value);
+           
+        if (input===OTP) {
+            document.getElementById("lblContent").innerHTML=`<span class="text-success"> OTP submitted Successfully</span>`;
+        } else {
+            while(input!==OTP){
+           if (attempt<=1) {
+            attempt++;
+            document.getElementById("lblContent").innerHTML=`<span class="text-danger">(${3-attempt} Attempts left)</span>`
+            break;
+           } else {
+
+            document.getElementById("txtOTP").disabled=true;
+           
+            var a = 10;
+           
+
+            var countdown = setInterval(function() {
+                if (a > 0) {
+                    document.getElementById("lblContent").innerHTML=`<span class="text-danger">wait text box will enable in ${a} second</span>`;
+                   
+                    a--;  
+                } else {
+                    clearInterval(countdown);
+                   
+                }
+            }, 1000);
+
+           
+            setTimeout(time,10000);
+
+            break;
+           
+           }
+        }
+        }
+        }
+
+
+       
+    </script>
+    
+</head>
+<body style="height: 100vh;" class="d-flex justify-content-center align-items-center w-100 bg-dark">
+    <div class="container d-flex justify-content-center align-items-center flex-column" style="height: 100vh;">
+        <div class="border border-2 border-secondary p-5 rounded rounded-5 bg-secondary-subtle">
+            <h5 class="text-center border border-2 border-black p-2 rounded rounded-3 bg-dark-subtle">Pin Verification</h5>
+    <div style="height: auto;" class="w-auto border border-2 border-black p-5 rounded-4 bg-dark-subtle" >
+        Enter Your PIN:<input class="form-control" type="password" placeholder="Enter four digit PIN" id="txtOTP">
+        <p id="lblContent"></p>
+        <button class="bg-body-secondary rounded-3" onclick="submitClick()">submit</button>
+    </div>
+</body>
+</html>
+
+
